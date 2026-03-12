@@ -48,6 +48,12 @@ namespace PraktikumADO
 
         private void btnHitungMK_Click(object sender, EventArgs e)
         {
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM Dosen";
+            }
 
         }
 
