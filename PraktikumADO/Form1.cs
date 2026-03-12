@@ -94,7 +94,16 @@ namespace PraktikumADO
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            {
+                Koneksi();
+                conn.Open();
 
+                string query = "INSERT INTO ProgramStudi VALUES ('MI11','Manajemen Informatika')";
+
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+            }
         }
 
 
