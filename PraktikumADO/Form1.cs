@@ -20,6 +20,12 @@ namespace PraktikumADO
         {
             InitializeComponent();
         }
+
+        private void Koneksi()
+        {
+            string connectionString = "Data Source=LAPTOP-Q1UQHI44\\MEILANULFIA;Initial Catalog=DBAkademikADO;Integrated Security=True";
+            conn = new SqlConnection(connectionString);
+        }
     }
 
 }
