@@ -48,6 +48,7 @@ namespace PraktikumADO
 
         private void btnHitungMK_Click(object sender, EventArgs e)
         {
+            try
             {
                 Koneksi();
                 conn.Open();
@@ -57,16 +58,21 @@ namespace PraktikumADO
                 cmd = new SqlCommand(query, conn);
                 int jumlah = (int)cmd.ExecuteScalar();
                 txtHasil.Text = jumlah.ToString();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
+
+
+
+
+
+
         }
-
-
-
-
-
-
-
     }
 }
 
